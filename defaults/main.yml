@@ -1,0 +1,8 @@
+php_container_name: 'php-fpm'
+php_docker_tag: '7-fpm-alpine'
+
+php_exposed_ports:
+  - '9000'
+
+php_published_ports:
+  - '9000:9000'
