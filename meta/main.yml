@@ -1,0 +1,16 @@
+galaxy_info:
+  author: Ann Arbor District Library
+  description: |
+    Ansible role to manage and run the alpine php docker container.
+  license: MIT
+  min_ansible_version: 2.1
+  platforms:
+    - name: Ubuntu
+      versions:
+       - trusty
+       - xenial
+  galaxy_tags:
+    - docker
+    - ubuntu
+    - php
+dependencies: []
