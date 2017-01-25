@@ -1,0 +1,14 @@
+- name: 'Start the php docker container'
+  become: yes
+  docker_container:
+    image: "php:{{ php_docker_tag }}"
+    name: '{{ php_container_name }}'
+    ports: '{{ php_published_ports }}'
+    expose: '{{ php_exposed_ports }}'
+    state: 'started'
+    restart_policy: 'always'
+    log_driver: 'syslog'
+    log_options:
+      tag: '{{ php_container_name }}'
+
+- meta: flush_handlers
